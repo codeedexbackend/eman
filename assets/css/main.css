@@ -1688,7 +1688,7 @@ p.excerpt {
 }
 
 .pagination-wrap ul li a {
-  color: #6f6f6f;
+  color: #000;
   font-size: 15px;
   background-color: #f3f3f3;
   display: inline-block;
