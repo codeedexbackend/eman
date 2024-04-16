@@ -193,8 +193,8 @@ p:last-child {
   height: 8vmax;
   border-right: 4px solid #000;
   border-radius: 50%;
-  -webkit-animation: spinRight 800ms linear infinite;
-  animation: spinRight 800ms linear infinite;
+  -webkit-animation: spinRight 300ms linear infinite;
+  animation: spinRight 300ms linear infinite;
 }
 
 .circle:before {
@@ -207,8 +207,8 @@ p:last-child {
   left: calc(50% - 3vmax);
   border-left: 3px solid #28a745;
   border-radius: 100%;
-  -webkit-animation: spinLeft 800ms linear infinite;
-  animation: spinLeft 800ms linear infinite;
+  -webkit-animation: spinLeft 300ms linear infinite;
+  animation: spinLeft 300ms linear infinite;
 }
 
 .circle:after {
