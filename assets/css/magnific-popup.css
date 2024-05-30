@@ -71,7 +71,7 @@
 
 .mfp-close,
 .mfp-arrow,
-.mfp-preloader,
+/* .mfp-preloader, */
 .mfp-counter {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -83,7 +83,7 @@
 .mfp-hide {
   display: none !important; }
 
-.mfp-preloader {
+/* .mfp-preloader {
   color: #CCC;
   position: absolute;
   top: 50%;
@@ -96,10 +96,10 @@
   .mfp-preloader a {
     color: #CCC; }
     .mfp-preloader a:hover {
-      color: #FFF; }
+      color: #FFF; } */
 
-.mfp-s-ready .mfp-preloader {
-  display: none; }
+/* .mfp-s-ready .mfp-preloader {
+  display: none; } */
 
 .mfp-s-error .mfp-content {
   display: none; }
