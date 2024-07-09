@@ -7,7 +7,7 @@
 	<meta name="description" content="Responsive Bootstrap4 Shop Template, Created by Imran Hossain from https://imransdesign.com/">
 
 	<!-- title -->
-	<title>Our Clients</title>
+	<title>Eman Bakeries - Our Clients</title>
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
@@ -30,6 +30,36 @@
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- responsive -->
 	<link rel="stylesheet" href="assets/css/responsive.css">
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const searchForm = document.getElementById('searchForm');
+			const searchInput = document.getElementById('searchInput');
+	
+			searchForm.addEventListener('submit', function(event) {
+				event.preventDefault();
+				const keyword = searchInput.value.trim().toLowerCase();
+	
+				if (keyword) {
+					const productData = {
+						'falafel': 'single-product.html?product=falafel',
+						'shamihub': 'single-product.html?product=shamihub',
+						'shamiwhitebread': 'single-product.html?product=shamiwhitebread',
+						'thurthillawhite': 'single-product.html?product=thurthillawhite',
+						'labnani': 'single-product.html?product=labnani'
+						// Add more products as needed
+					};
+	
+					if (productData[keyword]) {
+						window.location.href = productData[keyword];
+					} else {
+						alert('Product not found');
+					}
+				} else {
+					alert('Please enter a keyword');
+				}
+			});
+		});
+	</script>
 
 </head>
 <body>
@@ -107,24 +137,34 @@
 	</div>
 	<!-- end header -->
 
-	<!-- search area -->
-	<div class="search-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<span class="close-btn"><i class="fas fa-window-close"></i></span>
-					<div class="search-bar">
-						<div class="search-bar-tablecell">
-							<h3>Search For:</h3>
-							<input type="text" placeholder="Keywords">
-							<button type="submit">Search <i class="fas fa-search"></i></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end search arewa -->
+<!-- search area -->
+<div class="search-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <span class="close-btn"><i class="fas fa-window-close"></i></span>
+                <div class="search-bar">
+                    <div class="search-bar-tablecell">
+                        <h3>Search For:</h3>
+                        <form id="searchForm" action="single-product.html" method="GET">
+                            <input list="products" id="searchInput" name="product" placeholder="Keywords">
+                            <datalist id="products">
+                                <option value="falafel">
+                                <option value="shamihub">
+                                <option value="shamiwhitebread">
+                                <option value="thurthillawhite">
+                                <option value="labnani">
+                                <!-- Add more products as needed -->
+                            </datalist>
+                            <button type="submit">Search <i class="fas fa-search"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end search area -->
 	
 	<!-- breadcrumb-section -->
 	<div class="breadcrumb-section breadcrumb-bg">
@@ -141,116 +181,53 @@
 	</div>
 	<!-- end breadcrumb section -->
 
-	<!-- latest news -->
-	<div class="latest-news mt-150 mb-100">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">You will vainly look for fruit on it in autumn.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-2"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">A man's worth has its season, like tomato.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-3"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">Good thoughts bear good fresh juicy fruit.</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-4"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">Fall in love with the fresh orange</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-5"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">Why the berries always look delecious</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2019</span>
-							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-latest-news">
-						<a href="single-news.html"><div class="latest-news-bg news-bg-6"></div></a>
-						<div class="news-text-box">
-							<h3><a href="single-news.html">Love for fruits are genuine of John Doe</a></h3>
-							<p class="blog-meta">
-								<span class="author"><i class="fas fa-user"></i> Admin</span>
-								<span class="date"><i class="fas fa-calendar"></i> 27 December, 2018</span>
-							</p>
-							<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus laborum autem, dolores inventore, beatae nam.</p>
-							<a href="single-news.html" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<!-- <div class="row">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 text-center">
-							<div class="pagination-wrap">
-								<ul>
-									<li><a href="#">Prev</a></li>
-									<li><a class="active" href="#">1</a></li>
-									<li><a href="2.html">2</a></li>
-									<li><a href="3.html">3</a></li>
-									<li><a href="2.html">Next</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
-		</div>
-	</div>
-	<!-- end latest news -->
+	<!-- our clients say -->
+<div class="latest-news pb-100">
+    <div class="container">
+        <div class="row pt-100">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-news">
+                    <div class="latest-news-bg" style="background-image: url('path/to/client1.jpg');"></div>
+                    <div class="news-text-box">
+                        <h3>Best Bread Ever!</h3>
+                        <p class="blog-meta">
+                            <span class="author"><i class="fas fa-user"></i> John Doe</span>
+                            <span class="date"><i class="fas fa-calendar"></i> 15 March, 2023</span>
+                        </p>
+                        <p class="excerpt">"The quality and freshness of the bread from Eman Bakeries are unmatched. My family loves it!"</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="single-latest-news">
+                    <div class="latest-news-bg" style="background-image: url('path/to/client2.jpg');"></div>
+                    <div class="news-text-box">
+                        <h3>Excellent Service!</h3>
+                        <p class="blog-meta">
+                            <span class="author"><i class="fas fa-user"></i> Jane Smith</span>
+                            <span class="date"><i class="fas fa-calendar"></i> 20 April, 2023</span>
+                        </p>
+                        <p class="excerpt">"Eman Bakeries provides top-notch service and their products are always fresh and delicious."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
+                <div class="single-latest-news">
+                    <div class="latest-news-bg" style="background-image: url('path/to/client3.jpg');"></div>
+                    <div class="news-text-box">
+                        <h3>Highly Recommend!</h3>
+                        <p class="blog-meta">
+                            <span class="author"><i class="fas fa-user"></i> Ahmed Ali</span>
+                            <span class="date"><i class="fas fa-calendar"></i> 5 May, 2023</span>
+                        </p>
+                        <p class="excerpt">"I've been a loyal customer for years. Eman Bakeries never disappoints with their quality and service."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end our clients say -->
 
 	<!-- logo carousel -->
 	<div class="logo-carousel-section">
